@@ -1,0 +1,33 @@
+.my-tasks-header {
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: fit-content; */
+  padding-bottom: 0.5rem;
+  margin: 1rem 0;
+  /* background-color: red; */
+}
+
+.my-tasks-header-title-subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.my-tasks-header-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.my-tasks-header-subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.my-tasks-header-add-task-button {
+  width: fit-content;
+  height: fit-content;
+}
+

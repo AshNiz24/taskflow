@@ -1,0 +1,27 @@
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-form);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: var(--text-primary);
+  width: 95%;
+}
+
+.check-title-desc {
+  display: flex;
+  justify-content: start;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: end;
+}
+
+.task-title--completed,
+.task-desc--completed {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}

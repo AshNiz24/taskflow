@@ -1,0 +1,34 @@
+:root {
+  /* Main theme */
+  --bg-primary: #0d0c19;
+  --bg-card: #19172b;
+  --bg-form: #25213d;
+  --border: #393452;
+  /* Disabled states */
+  --disabled-bg: #2f2e48;
+  --disabled-text: #8a8a8a;
+  --disabled-surrounding: #25243f;
+
+  /* Primary purple */
+  --primary: #9147ff;
+  --primary-hover: #a66aff;
+  --primary-light: #c5a5ff;
+
+  /* Summary cards */
+  --total-bg: #30205a;
+  --total-accent: #b98aff;
+
+  --completed-bg: #153d34;
+  --completed-accent: #65e6b5;
+
+  --pending-bg: #472c1c;
+  --pending-accent: #ffc15e;
+
+  /* Typography */
+  --text-primary: #f8f7ff;
+  --text-secondary: #a5a2bb;
+
+  /* Status */
+  --danger: #ff647c;
+  --success: #65e6b5;
+}

@@ -1,0 +1,47 @@
+.empty-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-card);
+  border: 1px solid var(--total-accent);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  color: var(--text-primary);
+  height: 100%;
+}
+
+.empty-page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.empty-page-icon {
+  color: var(--total-accent);
+  display: flex;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--total-bg);
+}
+
+.empty-page-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.empty-page-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.empty-page-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+}

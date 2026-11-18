@@ -1,0 +1,6 @@
+ body{
+    background-color: var(--bg-primary);
+    padding: 0.5rem;
+    font-family: 'Inter', sans-serif;
+} 
+

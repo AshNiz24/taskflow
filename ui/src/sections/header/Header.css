@@ -1,0 +1,51 @@
+.header{
+    color: var(--text-primary);
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+}
+
+.title-and-logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo{
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    border-radius: 30%;
+}
+
+.title-and-subtitle{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.subtitle{
+    font-size: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.title-chip{
+    font-size: 0.75rem;
+    color: var(--primary-light);
+    background-color: var(--total-bg);
+    padding: 0.2rem 0.5rem;
+    border-radius: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
