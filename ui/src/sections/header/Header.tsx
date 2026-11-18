@@ -1,12 +1,11 @@
-import {CheckCheck } from "lucide-react";
-import './Header.css'
+import "./Header.css";
 
 const Header = () => {
   return (
      <div className="header">
         <div className="title-and-logo">
           <div className="logo">
-             <CheckCheck size={24} />
+            <img src="/list.png" alt="" />
           </div>
           <div className="title-and-subtitle">
           <div className="title">TaskFlow</div>
