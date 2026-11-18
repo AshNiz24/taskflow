@@ -1,4 +1,6 @@
+
 # Loads database settings, creates the PostgreSQL engine, and checks connectivity.
+
 import os
 from pathlib import Path
 
@@ -8,22 +10,36 @@ from sqlalchemy import URL, create_engine, text
 # Load the backend .env file relative to this module.
 load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
-# Build the database URL from the required and optional environment settings.
-database_url = URL.create(
-    "postgresql+psycopg",
-    username=os.environ["DB_USER"],  # Read the required PostgreSQL username.
-    password=os.environ["DB_PASSWORD"],  # Read the required PostgreSQL password.
-    host=os.getenv("DB_HOST", "localhost"),  # Use localhost when no host is configured.
-    port=int(os.getenv("DB_PORT", "5432")),  # Use PostgreSQL's default port when omitted.
-    database=os.environ["DB_NAME"],  # Read the required database name.
-)
+# Prefer a complete database URL (used for cloud deployment).
+# Otherwise, build the URL using individual local PostgreSQL settings.
+database_url = os.getenv("DATABASE_URL")
+
+if database_url:
+    # Neon provides a postgresql:// URL.
+    # Explicitly use the Psycopg 3 driver installed in this project.
+    if database_url.startswith("postgresql://"):
+        database_url = database_url.replace(
+            "postgresql://",
+            "postgresql+psycopg://",
+            1
+        )
+
+else:
+    # Build the URL using local PostgreSQL settings.
+    database_url = URL.create(
+        "postgresql+psycopg",
+        username=os.environ["DB_USER"],
+        password=os.environ["DB_PASSWORD"],
+        host=os.getenv("DB_HOST", "localhost"),
+        port=int(os.getenv("DB_PORT", "5432")),
+        database=os.environ["DB_NAME"],
+    )
 
 # Create an engine that manages and reuses database connections.
 engine = create_engine(
     database_url,
     pool_pre_ping=True,  # Check a pooled connection before using it.
 )
-
 
 # Run a small query to check that the database connection works.
 def check_database() -> int:
