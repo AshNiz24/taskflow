@@ -13,7 +13,7 @@ app.include_router(tasks.router)
 # Allow the local Vite frontend to send browser requests to this API.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Permit requests from the local Vite frontend.
+    allow_origins=["http://localhost:5173", "https://taskflow-six-pi.vercel.app"],  # Permit requests from the local Vite frontend.
     allow_credentials=True,  # Allow browser requests that include credentials.
     allow_methods=["*"],  # Allow the frontend to use any HTTP method during development.
     allow_headers=["*"],  # Allow the frontend to send request headers.
