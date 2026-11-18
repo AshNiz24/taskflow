@@ -12,8 +12,7 @@ The frontend calls the FastAPI backend. The backend reads and writes task data i
 
 ## URLs
 
-- **Live frontend:** Add the deployed frontend URL here.
-- **Live API documentation:** Add the deployed backend URL followed by `/docs`.
+- **Live frontend:** `https://taskflow-six-pi.vercel.app`
+- **Live API documentation:** `https://taskflow-jdy2.onrender.com/docs`.
 - **Local frontend:** `http://localhost:5173`
 - **Local API documentation:** `http://127.0.0.1:8000/docs`
-
