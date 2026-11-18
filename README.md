@@ -36,7 +36,6 @@ Update the details of an existing task.
 - **View Tasks:** Display tasks with their current completion status.
 - **Edit Tasks:** Update existing task details.
 - **Delete Tasks:** Remove tasks when they are no longer needed.
-- **Task Status:** Mark tasks as completed or pending.
 
 ## Tech Stack
 
